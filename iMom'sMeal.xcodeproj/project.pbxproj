@@ -35,6 +35,8 @@
 		7C0FA00318DB325000F51881 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0FA00218DB325000F51881 /* AppDelegate.m */; };
 		7C0FA00618DB325000F51881 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0FA00518DB325000F51881 /* MainViewController.m */; };
 		7C0FA00818DB325000F51881 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C0FA00718DB325000F51881 /* MainViewController.xib */; };
+		7C0FA01118DB348600F51881 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0FA01018DB348600F51881 /* Default.png */; };
+		7C0FA01318DB39BA00F51881 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 7C0FA01218DB39BA00F51881 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +54,10 @@
 		7C0F9FD618DB324F00F51881 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7C0F9FD818DB324F00F51881 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7C0F9FDA18DB324F00F51881 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		7C0F9FDE18DB324F00F51881 /* iMom'sMeal-Info.plist */ = {isa = PBXFileReference; path = "iMom'sMeal-Info.plist"; sourceTree = "<group>"; };
+		7C0F9FDE18DB324F00F51881 /* iMom'sMeal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iMom'sMeal-Info.plist"; sourceTree = "<group>"; };
 		7C0F9FE018DB324F00F51881 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C0F9FE218DB324F00F51881 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C0F9FE418DB324F00F51881 /* iMom'sMeal-Prefix.pch */ = {isa = PBXFileReference; path = "iMom'sMeal-Prefix.pch"; sourceTree = "<group>"; };
+		7C0F9FE418DB324F00F51881 /* iMom'sMeal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMom'sMeal-Prefix.pch"; sourceTree = "<group>"; };
 		7C0F9FE518DB324F00F51881 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		7C0F9FEA18DB324F00F51881 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C0F9FEE18DB324F00F51881 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -66,12 +68,14 @@
 		7C0F9FFA18DB325000F51881 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		7C0F9FFC18DB325000F51881 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		7C0F9FFE18DB325000F51881 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		7C0FA00118DB325000F51881 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		7C0FA00118DB325000F51881 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		7C0FA00218DB325000F51881 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		7C0FA00418DB325000F51881 /* MainViewController.h */ = {isa = PBXFileReference; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		7C0FA00418DB325000F51881 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		7C0FA00518DB325000F51881 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		7C0FA00718DB325000F51881 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		7C0FA00A18DB325000F51881 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		7C0FA00A18DB325000F51881 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		7C0FA01018DB348600F51881 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7C0FA01218DB39BA00F51881 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		7C0F9FB018DB324F00F51881 = {
 			isa = PBXGroup;
 			children = (
+				7C0FA01018DB348600F51881 /* Default.png */,
 				7C0F9FDC18DB324F00F51881 /* iMom'sMeal */,
 				7C0F9FC118DB324F00F51881 /* Frameworks */,
 				7C0F9FBF18DB324F00F51881 /* Products */,
@@ -146,6 +151,7 @@
 		7C0F9FDC18DB324F00F51881 /* iMom'sMeal */ = {
 			isa = PBXGroup;
 			children = (
+				7C0FA01218DB39BA00F51881 /* www */,
 				7C0F9FE518DB324F00F51881 /* PhoneGap.framework */,
 				7C0F9FE718DB324F00F51881 /* Resources */,
 				7C0FA00018DB325000F51881 /* Classes */,
@@ -299,6 +305,8 @@
 				7C0F9FFD18DB325000F51881 /* Capture.bundle in Resources */,
 				7C0F9FFF18DB325000F51881 /* PhoneGap.plist in Resources */,
 				7C0FA00818DB325000F51881 /* MainViewController.xib in Resources */,
+				7C0FA01118DB348600F51881 /* Default.png in Resources */,
+				7C0FA01318DB39BA00F51881 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +429,7 @@
 				GCC_PREFIX_HEADER = "iMom'sMeal/iMom'sMeal-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "iMom'sMeal/iMom'sMeal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -432,7 +441,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -448,6 +457,7 @@
 				GCC_PREFIX_HEADER = "iMom'sMeal/iMom'sMeal-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "iMom'sMeal/iMom'sMeal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -459,7 +469,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
