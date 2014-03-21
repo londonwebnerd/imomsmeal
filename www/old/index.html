@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8">
+	
+	<!-- Remove this line if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width">
+
+</head>
+
+<body>
+        <script>
+        <!--
+        /*
+        Random link button- By JavaScript Kit (http://javascriptkit.com)
+        Over 300+ free scripts!
+        This credit MUST stay intact for use
+        */
+        
+        //specify random links below. You can have as many as you want
+        var randomlinks=new Array()
+        
+        randomlinks[0]="http://google.com"
+        randomlinks[1]="http://sapo.pt"
+        randomlinks[2]="http://clix.com"
+        randomlinks[3]="http://meo.pt"
+        randomlinks[4]="http://www.yahoo.com"
+        
+        function randomlink(){
+        window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+        }
+        //-->
+        </script>
+        <form>
+        <p><input type="button" name="B1" value="Random Link >>" onclick="randomlink()"></p> </form>
+        
+        <!--Uncomment below to use a regular text link instead
+        <a href="javascript:randomlink()">Random Link</a>
+        -->
+        
+</body>
+</html>
