@@ -28,14 +28,13 @@ directory.utils.templateLoader = {
         $.when.apply(null, deferreds).done(callback);
     },
 
-    // Get template by name from hash of preloaded templates
     get: function(name) {
         return this.templates[name];
     }
 
 };
 
-// The in-memory Store. Encapsulates logic to access data.
+// Base de dados.
 directory.utils.store = {
 
     prato: {},
@@ -78,9 +77,6 @@ directory.utils.store = {
         this.prato[35] = {id: 35, primeiro: 'Sopa de', ultimo: 'Cogumelos', tipo_de_prato: 'Sopas', sugestId: 16, sugestao: 'Sopas', telemovel: '910425260', reportCount: 0};
         this.prato[36] = {id: 36, primeiro: 'Sopa de', ultimo: 'Cenoura', tipo_de_prato: 'Sopas', sugestId: 16, sugestao: 'Sopas', telemovel: '910425260', reportCount: 0};
 
-
-
-
     },
 
     findById: function(id) {
@@ -113,30 +109,22 @@ directory.utils.store = {
 
 };
 
-// Overriding Backbone's sync method. Replace the default RESTful services-based implementation
-// with a simple local database approach.
 Backbone.sync = function(method, model, options) {
 
     var store = directory.utils.store;
 
     if (method === "read") {
         if (model.id) {
-            // Request to read a single item identified by its id.
             options.success(store.findById(model.id));
         } else if (model.sugestId) {
-            // Request to read a collection of prato identified by the manager they work for.
             options.success(store.findByManager(model.sugestId));
         } else {
-            // Request to read a collection of all prato.
             options.success(store.findAll());
         }
     }
 
 };
 
-// -------------------------------------------------- The Models ---------------------------------------------------- //
-
-// The Employee Model
 directory.models.Employee = Backbone.Model.extend({
 
     initialize: function() {
@@ -146,7 +134,6 @@ directory.models.Employee = Backbone.Model.extend({
 
 });
 
-// The EmployeeCollection Model
 directory.models.EmployeeCollection = Backbone.Collection.extend({
 
     model: directory.models.Employee,
@@ -159,8 +146,6 @@ directory.models.EmployeeCollection = Backbone.Collection.extend({
 
 });
 
-
-// -------------------------------------------------- The Views ---------------------------------------------------- //
 
 directory.views.SearchPage = Backbone.View.extend({
 
@@ -288,7 +273,6 @@ directory.Router = Backbone.Router.extend({
             });
         }
 
-        // We keep a single instance of the SearchPage and its associated Employee collection throughout the app
         this.searchResults = new directory.models.EmployeeCollection();
         this.searchPage = new directory.views.SearchPage({model: this.searchResults});
         this.searchPage.render();
@@ -374,7 +358,7 @@ directory.Router = Backbone.Router.extend({
 
 });
 
-// Bootstrap the application
+// Bootstrap
 directory.utils.store.populate();
 directory.utils.templateLoader.load(['pesquisa', 'sugestao', 'pratos', 'lista-pratos'],
     function() {
