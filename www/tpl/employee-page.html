@@ -1,12 +1,12 @@
 <div class="header">
     <a href="#" class="header-button header-button-left header-back-button">
-        <button>Back</button>
+        <button>Voltar</button>
     </a>
     <a href="#" class="header-button header-button-icon header-button-right search" id="view-home-refresh">
         <button><img src="css/images/search-icon.png" alt="Refresh" width="16" height="16"></button>
     </a>
 
-    <h1>Employee</h1>
+    <h1>Prato</h1>
 </div>
 
 <div class="scroll striped" style="top:44px;">
@@ -23,7 +23,7 @@
     <ul class="tableview tableview-links">
         <% if (managerName) { %>
         <li>
-            <a href="#employees/<%= managerId %>">
+            <a href="#prato/<%= managerId %>">
                 <div class="story">
                     <b>View Manager</b><br/>
                     <span class="metadata"><%= managerName %></span>
@@ -34,7 +34,7 @@
         <% } %>
         <% if (reportCount > 0) { %>
         <li>
-            <a href="#employees/<%= id %>/reports">
+            <a href="#prato/<%= id %>/reports">
                 <div class="story">
                     <b>View Direct Reports</b><br/>
                     <span class="metadata"><%= reportCount %></span>
