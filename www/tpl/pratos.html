@@ -12,7 +12,7 @@
 <div class="scroll striped" style="top:44px;">
     <div class="employee-summary">
         <header>
-            <img id="employeePic" src="pics/<%= primeiro %>_<%= ultimo %>.jpg" width="100"/>
+            <img id="employeePic" src="pratos/<%= primeiro %>_<%= ultimo %>.jpg" width="100"/>
 
             <h1><%= primeiro %> <%= ultimo %></h1>
             <span class="link-text"><%= tipo_de_prato %></span><br/>
@@ -34,7 +34,7 @@
         </li>
         <% } %>
         <li>
-            <a href="sms:910425260?body=Eu%20quero">
+            <a href="sms:910425260?body=Eu%20quero <%= id %>">
                 <div class="story">
                     <b>Enviar Mensagem</b><br/>
                     <span class="metadata"><%= telemovel %></span>
