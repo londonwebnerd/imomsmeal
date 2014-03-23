@@ -38,45 +38,45 @@ directory.utils.templateLoader = {
 // The in-memory Store. Encapsulates logic to access employee data.
 directory.utils.store = {
 
-    employees: {},
+    prato: {},
 
     populate: function() {
-        this.employees[1] = {id: 1, firstName: 'Alheira no', lastName: 'Forno', title: 'Carnes', managerId: null, managerName: null, city: 'New York, NY', officePhone: '212-999-8888', cellPhone: '212-999-8887', email: 'ryan@dundermifflin.com', reportCount: 2};
-        this.employees[2] = {id: 2, firstName: 'Almondegas com', lastName: 'Massa', title: 'Carnes', managerId: 1, managerName: 'Ryan Howard', city: 'Scranton, PA', officePhone: '570-888-9999', cellPhone: '570-222-3333', email: 'michael@dundermifflin.com', reportCount: 7};
-        this.employees[3] = {id: 3, firstName: 'Bifanas no', lastName: 'Pão', title: 'Carnes', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-444-4444', cellPhone: '570-333-3333', email: 'dwight@dundermifflin.com', reportCount: 0};
-        this.employees[4] = {id: 4, firstName: 'Bife a', lastName: 'Portuguesa', title: 'Carnes', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-222-2121', cellPhone: '570-999-1212', email: 'jim@dundermifflin.com', reportCount: 1};
-        this.employees[5] = {id: 5, firstName: 'Bife com', lastName: 'Cogumelos', title: 'Carnes',managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-999-5555', cellPhone: '570-999-7474', email: 'pam@dundermifflin.com', reportCount: 1};
-        this.employees[6] = {id: 6, firstName: 'Bola de', lastName: 'Carne', title: 'Carnes',managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-555-9696', cellPhone: '570-999-3232', email: 'angela@dundermifflin.com', reportCount: 2};
-        this.employees[7] = {id: 7, firstName: 'Coelho', lastName: 'Assado', title: 'Carnes',managerId: 6, managerName: 'Angela Martin', city: 'Scranton, PA', officePhone: '570-777-9696', cellPhone: '570-111-2525', email: 'kmalone@dundermifflin.com', reportCount: 1};
-        this.employees[8] = {id: 8, firstName: 'Costoletas de', lastName: 'Porco', title: 'Carnes',managerId: 6, managerName: 'Angela Martin', city: 'Scranton, PA', officePhone: '570-321-9999', cellPhone: '570-585-3333', email: 'oscar@dundermifflin.com', reportCount: 1};
-        this.employees[9] = {id: 9, firstName: 'Cozido à', lastName: 'Portuguesa', title: 'Carnes', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-222-6666', cellPhone: '333-8585', email: 'creed@dundermifflin.com', reportCount: 1};
-        this.employees[10] = {id: 10, firstName: 'Empadão de', lastName: 'Carne', title: 'Carnes', managerId: 4, managerName: 'Jim Halpert', city: 'Scranton, PA', officePhone: '570-555-0000', cellPhone: '570-546-9999',email: 'andy@dundermifflin.com', reportCount: 2};
-        this.employees[11] = {id: 11, firstName: 'Almondegas de', lastName: 'Peixe', title: 'Peixe', managerId: 10, managerName: 'Andy Bernard', city: 'Scranton, PA', officePhone: '570-141-3333', cellPhone: '570-888-6666', email: 'phyllis@dundermifflin.com', reportCount: 1};
-        this.employees[12] = {id: 12, firstName: 'Arroz de', lastName: 'Marisco', title: 'Peixe', managerId: 10, managerName: 'Andy Bernard', city: 'Scranton, PA', officePhone: '570-700-6666', cellPhone: '570-777-6666', email: 'shudson@dundermifflin.com', reportCount: 1};
-        this.employees[13] = {id: 13, firstName: 'Salmão', lastName: 'Gratinado', title: 'Peixe', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-555-8888', cellPhone: '570-777-2222', email: 'meredith@dundermifflin.com', reportCount: 1};
-        this.employees[14] = {id: 14, firstName: 'Arroz de', lastName: 'Polvo', title: 'Peixe', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-123-9654', cellPhone: '570-125-3666', email: 'kelly@dundermifflin.com', reportCount: 0};
-        this.employees[15] = {id: 15, firstName: 'Bacalhau com', lastName: 'Broa', title: 'Peixe', managerId: 1, managerName: 'Ryan Howard', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 1};
-        this.employees[16] = {id: 16, firstName: 'Espetadas de', lastName: 'Atum', title: 'Peixe', managerId: null, managerName: null, city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 1};
-        this.employees[17] = {id: 17, firstName: 'Filetes de', lastName: 'Pescada', title: 'Peixe', managerId: 16, managerName: 'Prato de Carne', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 1};
-        this.employees[18] = {id: 18, firstName: 'Hamburguer de', lastName: 'Atum', title: 'Peixe', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[19] = {id: 19, firstName: 'Lasanha de', lastName: 'Atum', title: 'Peixe', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[20] = {id: 20, firstName: 'Bacalhau com', lastName: 'Natas', title: 'Peixe', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[21] = {id: 21, firstName: 'Salada de', lastName: 'Bacalhau', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[22] = {id: 22, firstName: 'Salada de', lastName: 'Berinjela', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[23] = {id: 23, firstName: 'Salada de', lastName: 'Camarão', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[24] = {id: 24, firstName: 'Salada de', lastName: 'Frango', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[25] = {id: 25, firstName: 'Salada', lastName: 'Russa', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[26] = {id: 26, firstName: 'Salada', lastName: 'Tropical', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[27] = {id: 27, firstName: 'Salada com', lastName: 'Macarrão', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[28] = {id: 28, firstName: 'Salada', lastName: 'Natalina', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[29] = {id: 29, firstName: 'Salada com', lastName: 'Maionese', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[30] = {id: 30, firstName: 'Salada de Grão de', lastName: 'Bico', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[31] = {id: 31, firstName: 'Caldo', lastName: 'Verde', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[32] = {id: 32, firstName: 'Canja de', lastName: 'Galinha', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[33] = {id: 33, firstName: 'Sopa de', lastName: 'Peixe', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[34] = {id: 34, firstName: 'Sopa à', lastName: 'Lavrador', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[35] = {id: 35, firstName: 'Sopa de', lastName: 'Cogumelos', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
-        this.employees[36] = {id: 36, firstName: 'Sopa de', lastName: 'Cenoura', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[1] = {id: 1, firstName: 'Alheira no', lastName: 'Forno', title: 'Carnes', managerId: null, managerName: null, city: 'New York, NY', officePhone: '212-999-8888', cellPhone: '212-999-8887', email: 'ryan@dundermifflin.com', reportCount: 2};
+        this.prato[2] = {id: 2, firstName: 'Almondegas com', lastName: 'Massa', title: 'Carnes', managerId: 1, managerName: 'Ryan Howard', city: 'Scranton, PA', officePhone: '570-888-9999', cellPhone: '570-222-3333', email: 'michael@dundermifflin.com', reportCount: 7};
+        this.prato[3] = {id: 3, firstName: 'Bifanas no', lastName: 'Pão', title: 'Carnes', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-444-4444', cellPhone: '570-333-3333', email: 'dwight@dundermifflin.com', reportCount: 0};
+        this.prato[4] = {id: 4, firstName: 'Bife a', lastName: 'Portuguesa', title: 'Carnes', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-222-2121', cellPhone: '570-999-1212', email: 'jim@dundermifflin.com', reportCount: 1};
+        this.prato[5] = {id: 5, firstName: 'Bife com', lastName: 'Cogumelos', title: 'Carnes',managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-999-5555', cellPhone: '570-999-7474', email: 'pam@dundermifflin.com', reportCount: 1};
+        this.prato[6] = {id: 6, firstName: 'Bola de', lastName: 'Carne', title: 'Carnes',managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-555-9696', cellPhone: '570-999-3232', email: 'angela@dundermifflin.com', reportCount: 2};
+        this.prato[7] = {id: 7, firstName: 'Coelho', lastName: 'Assado', title: 'Carnes',managerId: 6, managerName: 'Angela Martin', city: 'Scranton, PA', officePhone: '570-777-9696', cellPhone: '570-111-2525', email: 'kmalone@dundermifflin.com', reportCount: 1};
+        this.prato[8] = {id: 8, firstName: 'Costoletas de', lastName: 'Porco', title: 'Carnes',managerId: 6, managerName: 'Angela Martin', city: 'Scranton, PA', officePhone: '570-321-9999', cellPhone: '570-585-3333', email: 'oscar@dundermifflin.com', reportCount: 1};
+        this.prato[9] = {id: 9, firstName: 'Cozido à', lastName: 'Portuguesa', title: 'Carnes', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-222-6666', cellPhone: '333-8585', email: 'creed@dundermifflin.com', reportCount: 1};
+        this.prato[10] = {id: 10, firstName: 'Empadão de', lastName: 'Carne', title: 'Carnes', managerId: 4, managerName: 'Jim Halpert', city: 'Scranton, PA', officePhone: '570-555-0000', cellPhone: '570-546-9999',email: 'andy@dundermifflin.com', reportCount: 2};
+        this.prato[11] = {id: 11, firstName: 'Almondegas de', lastName: 'Peixe', title: 'Peixe', managerId: 10, managerName: 'Andy Bernard', city: 'Scranton, PA', officePhone: '570-141-3333', cellPhone: '570-888-6666', email: 'phyllis@dundermifflin.com', reportCount: 1};
+        this.prato[12] = {id: 12, firstName: 'Arroz de', lastName: 'Marisco', title: 'Peixe', managerId: 10, managerName: 'Andy Bernard', city: 'Scranton, PA', officePhone: '570-700-6666', cellPhone: '570-777-6666', email: 'shudson@dundermifflin.com', reportCount: 1};
+        this.prato[13] = {id: 13, firstName: 'Salmão', lastName: 'Gratinado', title: 'Peixe', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-555-8888', cellPhone: '570-777-2222', email: 'meredith@dundermifflin.com', reportCount: 1};
+        this.prato[14] = {id: 14, firstName: 'Arroz de', lastName: 'Polvo', title: 'Peixe', managerId: 2, managerName: 'Michael Scott', city: 'Scranton, PA', officePhone: '570-123-9654', cellPhone: '570-125-3666', email: 'kelly@dundermifflin.com', reportCount: 0};
+        this.prato[15] = {id: 15, firstName: 'Bacalhau com', lastName: 'Broa', title: 'Peixe', managerId: 1, managerName: 'Ryan Howard', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 1};
+        this.prato[16] = {id: 16, firstName: 'Espetadas de', lastName: 'Atum', title: 'Peixe', managerId: null, managerName: null, city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 1};
+        this.prato[17] = {id: 17, firstName: 'Filetes de', lastName: 'Pescada', title: 'Peixe', managerId: 16, managerName: 'Prato de Carne', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 1};
+        this.prato[18] = {id: 18, firstName: 'Hamburguer de', lastName: 'Atum', title: 'Peixe', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[19] = {id: 19, firstName: 'Lasanha de', lastName: 'Atum', title: 'Peixe', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[20] = {id: 20, firstName: 'Bacalhau com', lastName: 'Natas', title: 'Peixe', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[21] = {id: 21, firstName: 'Salada de', lastName: 'Bacalhau', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[22] = {id: 22, firstName: 'Salada de', lastName: 'Berinjela', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[23] = {id: 23, firstName: 'Salada de', lastName: 'Camarão', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[24] = {id: 24, firstName: 'Salada de', lastName: 'Frango', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[25] = {id: 25, firstName: 'Salada', lastName: 'Russa', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[26] = {id: 26, firstName: 'Salada', lastName: 'Tropical', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[27] = {id: 27, firstName: 'Salada com', lastName: 'Macarrão', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[28] = {id: 28, firstName: 'Salada', lastName: 'Natalina', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[29] = {id: 29, firstName: 'Salada com', lastName: 'Maionese', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[30] = {id: 30, firstName: 'Salada de Grão de', lastName: 'Bico', title: 'Saladas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[31] = {id: 31, firstName: 'Caldo', lastName: 'Verde', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[32] = {id: 32, firstName: 'Canja de', lastName: 'Galinha', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[33] = {id: 33, firstName: 'Sopa de', lastName: 'Peixe', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[34] = {id: 34, firstName: 'Sopa à', lastName: 'Lavrador', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[35] = {id: 35, firstName: 'Sopa de', lastName: 'Cogumelos', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
+        this.prato[36] = {id: 36, firstName: 'Sopa de', lastName: 'Cenoura', title: 'Sopas', managerId: 16, managerName: 'Prato de Sobremesas', city: 'Scranton, PA', officePhone: '570-485-8554', cellPhone: '570-996-5577', email: 'tflenderson@dundermifflin.com', reportCount: 0};
 
 
 
@@ -84,18 +84,18 @@ directory.utils.store = {
     },
 
     findById: function(id) {
-        return this.employees[id];
+        return this.prato[id];
     },
 
     findAll: function() {
-        return this.employees;
+        return this.prato;
     },
 
     findByName: function(key) {
         var results = [];
-        for (var id in this.employees) {
-            if ( (this.employees[id].firstName + " " + this.employees[id].lastName).toLowerCase().indexOf(key.toLowerCase()) >= 0) {
-                results.push(this.employees[id]);
+        for (var id in this.prato) {
+            if ( (this.prato[id].firstName + " " + this.prato[id].lastName).toLowerCase().indexOf(key.toLowerCase()) >= 0) {
+                results.push(this.prato[id]);
             }
         }
         return results;
@@ -103,9 +103,9 @@ directory.utils.store = {
 
     findByManager: function(managerId) {
         var results = [];
-        for (var id in this.employees) {
-            if (this.employees[id].managerId === managerId) {
-                results.push(this.employees[id]);
+        for (var id in this.prato) {
+            if (this.prato[id].managerId === managerId) {
+                results.push(this.prato[id]);
             }
         }
         return results;
@@ -124,10 +124,10 @@ Backbone.sync = function(method, model, options) {
             // Request to read a single item identified by its id.
             options.success(store.findById(model.id));
         } else if (model.managerId) {
-            // Request to read a collection of employees identified by the manager they work for.
+            // Request to read a collection of prato identified by the manager they work for.
             options.success(store.findByManager(model.managerId));
         } else {
-            // Request to read a collection of all employees.
+            // Request to read a collection of all prato.
             options.success(store.findAll());
         }
     }
@@ -251,8 +251,8 @@ directory.Router = Backbone.Router.extend({
     routes: {
         "": "list",
         "list": "list",
-        "employees/:id": "employeeDetails",
-        "employees/:id/reports": "directReports"
+        "prato/:id": "employeeDetails",
+        "prato/:id/reports": "directReports"
     },
 
     initialize: function() {
