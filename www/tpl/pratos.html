@@ -1,0 +1,46 @@
+<div class="header">
+    <a href="#" class="header-button header-button-left header-back-button">
+        <button>Voltar</button>
+    </a>
+    <a href="#" class="header-button header-button-icon header-button-right search" id="view-home-refresh">
+        <button><img src="css/images/search-icon.png" alt="Refresh" width="16" height="16"></button>
+    </a>
+
+    <h1>Prato</h1>
+</div>
+
+<div class="scroll striped" style="top:44px;">
+    <div class="employee-summary">
+        <header>
+            <img id="employeePic" src="pics/<%= primeiro %>_<%= ultimo %>.jpg" width="100"/>
+
+            <h1><%= primeiro %> <%= ultimo %></h1>
+            <span class="link-text"><%= tipo_de_prato %></span><br/>
+        </header>
+    </div>
+
+    <ul class="tableview tableview-links">
+        <% if (sugestao) { %>
+        <% } %>
+        <% if (reportCount > 0) { %>
+        <li>
+            <a href="#prato/<%= id %>/reports">
+                <div class="story">
+                    <b>Ver Pratos Sugeridos</b><br/>
+                    <span class="metadata"><%= reportCount %></span>
+                </div>
+                <img src="css/images/reports.png" class="action-icon"/>
+            </a>
+        </li>
+        <% } %>
+        <li>
+            <a href="sms:910425260?body=Eu%20quero">
+                <div class="story">
+                    <b>Enviar Mensagem</b><br/>
+                    <span class="metadata"><%= telemovel %></span>
+                </div>
+                <img src="css/images/message.png" class="action-icon"/>
+            </a>
+        </li>
+    </ul>
+</div>
