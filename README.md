@@ -7,3 +7,5 @@
 <p>A aplicação será suportada pelo <a title="iOS" href="http://www.apple.com/ios/" target="_blank">iOS 6.1.6/7</a>.</p>
 <h3>Métodos de distribuição</h3>
 <p>A distribuição desta aplicação será feita através da <a title="App Store" href="http://store.apple.com/" target="_blank">App Store</a>.</p>
+<h3>Site Oficial</h3>
+<a title="Site Oficial da Aplicação" href="http://www.imomsmealapp.tk/">www.imomsmealapp.tk</a>.
