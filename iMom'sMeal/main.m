@@ -21,7 +21,12 @@
 //  iMom'sMeal
 //
 //  Created by Andrew Gomes on 20/03/2014.
-//  Copyright __MyCompanyName__ 2014. All rights reserved.
+//  Copyright Escola Profissional do Centro Juvenil de Campanhã 2014. All rights reserved.
+//  Desenvolvido por:
+//  Ruben André Marques
+//  Rui Filipe Moreira
+//  João da Silva
+//  Igor Veloso
 //
 
 #import <UIKit/UIKit.h>
