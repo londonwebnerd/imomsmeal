@@ -115,10 +115,10 @@
 		7C0F9FB018DB324F00F51881 = {
 			isa = PBXGroup;
 			children = (
-				7CB5AB8018E0593E00C5ADA7 /* icon1.png */,
 				7C0FA01018DB348600F51881 /* Default.png */,
-				7C0F9FDC18DB324F00F51881 /* iMom'sMeal */,
 				7C0F9FC118DB324F00F51881 /* Frameworks */,
+				7CB5AB8018E0593E00C5ADA7 /* icon1.png */,
+				7C0F9FDC18DB324F00F51881 /* iMom'sMeal */,
 				7C0F9FBF18DB324F00F51881 /* Products */,
 			);
 			sourceTree = "<group>";
